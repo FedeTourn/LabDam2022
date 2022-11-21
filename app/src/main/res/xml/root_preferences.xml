@@ -18,6 +18,13 @@
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/pago_header">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/metodo"
+            android:entryValues="@array/metodo_entries"
+            android:key="list_preference_1"
+            android:title="Método de pago preferido" />
         <ListPreference
             android:defaultValue="1"
             android:entries="@array/moneda"
@@ -25,12 +32,6 @@
             android:key="list_preference_1"
             android:title="Moneda preferida"
             app:isPreferenceVisible="false" />
-        <ListPreference
-            android:defaultValue="1"
-            android:entries="@array/metodo"
-            android:entryValues="@array/metodo_entries"
-            android:key="list_preference_1"
-            android:title="Método de pago preferido" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Otras">
 

@@ -58,7 +58,11 @@ public class MainActivity extends AppCompatActivity implements BusquedaFragment.
                 /* Agregar el intento del fragmento */
                 return true;
             case R.id.mnuOptConfiguracion:
-                /* Agregar el intento del fragmento */
+                NavHostFragment navHostFragment =
+                        (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
+                NavController navController = navHostFragment.getNavController();
+
+                navController.navigate(R.id.settingsFragment);
                 return true;
             default:
                 Toast.makeText(this,"Error",Toast.LENGTH_LONG).show();
