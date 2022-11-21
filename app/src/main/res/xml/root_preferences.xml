@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/datos_header">
+
+        <EditTextPreference
+            app:key="email"
+            app:title="@string/email_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key="numeroCuit"
+            app:title="@string/cuit"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/pago_header">
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/moneda"
+            android:entryValues="@array/moneda_entries"
+            android:key="list_preference_1"
+            android:title="Moneda preferida"
+            app:isPreferenceVisible="false" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/metodo"
+            android:entryValues="@array/metodo_entries"
+            android:key="list_preference_1"
+            android:title="Método de pago preferido" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Otras">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="check_box_preference_1"
+            android:title="Activar notificaciones" />
+        <CheckBoxPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:key="check_box_preference_1"
+            android:title="Guardar información de uso" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

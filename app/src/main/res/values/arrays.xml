@@ -1,0 +1,27 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="metodo">
+        <item>Efectivo</item>
+        <item>Tarjeta de Crédito</item>
+        <item>Tarjeta Débito</item>
+        <item>Débito por CBU</item>
+    </string-array>
+
+    <string-array name="metodo_entries">
+        <item>efectivo</item>
+        <item>tarjetaCrédito</item>
+        <item>tarjetaDébito</item>
+        <item>debitoCbu</item>
+    </string-array>
+
+    <string-array name="moneda">
+        <item>Pesos</item>
+        <item>Dolares</item>
+        <item>Euros</item>
+    </string-array>
+    <string-array name="moneda_entries">
+        <item>pesos</item>
+        <item>dolares</item>
+        <item>euros</item>
+    </string-array>
+</resources>

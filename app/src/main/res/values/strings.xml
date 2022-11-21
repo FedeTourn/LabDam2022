@@ -39,6 +39,22 @@
     <string name="capacidad">Capacidad:</string>
     <string name="precio">Precio:</string>
     <string name="ver_detalle">Ver Detalle</string>
+    <!-- Preference Titles -->
+    <string name="datos_header">Datos personales</string>
+    <string name="pago_header">Preferencias de pago</string>
+
+    <!-- Messages Preferences -->
+    <string name="email_title">Correo Electrónico</string>
+    <string name="cuit">CUIT</string>
+
+
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 
 </resources>
