@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.mdgz.dam.labdam2022.model.Alojamiento;
 import com.mdgz.dam.labdam2022.model.Ciudad;
 import com.mdgz.dam.labdam2022.repo.CiudadRepository;
 
@@ -27,7 +28,7 @@ public class BusquedaFragment extends Fragment {
     private Button btnBuscar, btnLimpiar;
 
     public interface OnBuscarListener{
-        public void buscar();
+        public void buscar(String tipoAlojamiento, int cantidadOcupantes, boolean incluyeWifi, String ciudad, int minimo, int maximo);
     }
     private OnBuscarListener listenerBuscar;
 
@@ -66,10 +67,15 @@ public class BusquedaFragment extends Fragment {
         ciudades.setAdapter(adapter);
 
         btnBuscar = v.findViewById(R.id.btn_Buscar);
+        tipoAlojamiento = v.findViewById(R.id.spinner_tipo_alojamiento);
+        cantOcupantes = v.findViewById(R.id.spinner_cant_ocupantes);
+        precioMaximo = v.findViewById(R.id.precio_maximo);
+        precioMinimo = v.findViewById(R.id.precio_minimo);
+        wifi = v.findViewById(R.id.chk_wifi);
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listenerBuscar.buscar();//A buscar hay que pasarle un conjunto de info a buscar
+                listenerBuscar.buscar(((String) tipoAlojamiento.getSelectedItem()), Integer.parseInt((String) cantOcupantes.getSelectedItem()), wifi.isActivated(), ((Ciudad) ciudades.getSelectedItem()).getNombre(), Integer.valueOf(precioMaximo.getText().toString()), Integer.valueOf(precioMinimo.getText().toString()));//A buscar hay que pasarle un conjunto de info a buscar
             }
         });
         return v;

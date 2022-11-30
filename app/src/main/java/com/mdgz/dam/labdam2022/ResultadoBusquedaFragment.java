@@ -119,6 +119,8 @@ public class ResultadoBusquedaFragment extends Fragment {
             alojamientoHolder.titulo.setText(alojamiento.getTitulo());
             alojamientoHolder.capacidad.setText(alojamiento.getCapacidad().toString());
             alojamientoHolder.precioBase.setText(alojamiento.getPrecioBase().toString());
+
+
             //alojamientoHolder.imgAloj.setImageResource();//Buscar la imagen
 
             alojamientoHolder.btnDetalle.setOnClickListener(new View.OnClickListener() {

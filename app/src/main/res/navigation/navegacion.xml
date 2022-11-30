@@ -44,5 +44,14 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.mdgz.dam.labdam2022.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_visualizaArchivo"
+            app:destination="@id/visualizaArchivo" />
+    </fragment>
+    <activity
+        android:id="@+id/visualizaArchivo"
+        android:name="com.mdgz.dam.labdam2022.VisualizaArchivo"
+        android:label="activity_visualiza_archivo"
+        tools:layout="@layout/activity_visualiza_archivo" />
 </navigation>
